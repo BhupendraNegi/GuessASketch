@@ -3,14 +3,14 @@ Guess a Sketch - An Android Application build to help the physcially challenged 
 
 
 ## It has 3 layers:-
--[ ] Guess a Sketch Android App, which will help to draw the sketches. The Android app was build such that it doesn’t save sketches locally, but instead, send them over the internet in a POST HTTP request to the middle layer. Which in turn would return a JSON format response with labels it predicts would match this sketch. 
+- [ ] Guess a Sketch Android App, which will help to draw the sketches. The Android app was build such that it doesn’t save sketches locally, but instead, send them over the internet in a POST HTTP request to the middle layer. Which in turn would return a JSON format response with labels it predicts would match this sketch. 
 
 Guess a Sketch Android app would then display those predictions to the user in a list of radio buttons, There also would be an option to suggest a different label.  If the predictions provided by the Middle layer were correct and the user selects one of them, then that would be a positive feedback for the system, we simply guessed it right, this positive feedback would be used later on to retrain the engine and increase the confidence of this prediction. 
 
 If the user didn’t find the label they were expecting, then they can choose the “Other (Please specify)” button, which would by then asks them to enter a label for the sketch the drew. This is called “Negative feedback”, this Label along with the sketch would be sent to the middle layer and would be used later on to retrain the system and introduce a new class (label) if number of images submitted by users matches a certain threshold (30 images, for now, it’s a requirement by tensorflow), In order to help faster builds for the Android app as well as better dependency handling we used a software project management tool and build management called Gradle (https://gradle.org/) 
 
 
--[ ] The middle layer is firebase.
+- [ ] The middle layer is firebase.
 #### Functionalities of Middle layers:
 Guess a sketch, in this API call, the android app would send the image binary data, middle layer would forward this binary data along with a specially crafted HTTP POST request to the Guess-Sketch Engine, This engine would reply with a JSON string containing a list of predictions matching that sketch. Middle layer would then pass this JSON string back to the Android app.
 
@@ -18,7 +18,7 @@ Guess a sketch, in this API call, the android app would send the image binary da
 
 * Negative Feedback: Android app sends the binary data of the image along with the label entered by the user, this image data along with that label would be kept inside a negative feedback folder and would be used later to retrain the system once the number of images reaches a threshold (30 images in this case). Retraining would happen copying over this label-named new folder along with images inside it to the dataset folder and run the retraining script. 
 
--[ ] Guess A Sketch Engine is python based FastCGI script that uses TensorFlow (https://www.tensorflow.org/) inception engine to predict images sent by the middle layer and responds back in a JSON format string. 
+- [ ] Guess A Sketch Engine is python based FastCGI script that uses TensorFlow (https://www.tensorflow.org/) inception engine to predict images sent by the middle layer and responds back in a JSON format string. 
 
 Tensorflow initially comes untrained, we trained that system by drawing sketches for 12 different classes (refer to Dataset section above), once trained the system generates a bottleneck files, labels file and a .pb file which acts like a knowledge database that tensorflow engine can use later on to make predictions.
 
