@@ -1,0 +1,6 @@
+<root>
+    <item name='java.util.concurrent.ThreadPoolExecutor workers'>
+        <annotation name='org.jetbrains.annotations.NotNull' />
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>
