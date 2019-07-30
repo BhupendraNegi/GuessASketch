@@ -4,7 +4,7 @@ Guess a Sketch - An Android Application build to help the physcially challenged 
 ![Image of GuessASketch](https://github.com/BhupendraNegi/GuessASketch/blob/master/pictures/Screenshot_2018-12-05-00-53-36-655_edu.mum.ml.group7.guessasketch.android.png)
 
 
-![Image of GuessASketch] (https://github.com/BhupendraNegi/GuessASketch/blob/master/pictures/Screenshot_2018-12-05-00-53-41-347_edu.mum.ml.group7.guessasketch.android.png)
+![Image of GuessASketch](https://github.com/BhupendraNegi/GuessASketch/blob/master/pictures/Screenshot_2018-12-05-00-53-41-347_edu.mum.ml.group7.guessasketch.android.png)
 ## It has 3 layers:-
 - [ ] Guess a Sketch Android App, which will help to draw the sketches. The Android app was build such that it doesn’t save sketches locally, but instead, send them over the internet in a POST HTTP request to the middle layer. Which in turn would return a JSON format response with labels it predicts would match this sketch. 
 
